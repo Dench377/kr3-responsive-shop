@@ -1,0 +1,462 @@
+/* 1. БАЗОВЫЕ РЕСПОНСИВНЫЕ ПРАВИЛА И ЗАЩИТА ОТ СКРОЛЛА */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. ДОСТУПНОСТЬ: SKIP-LINK И ВИДИМЫЙ ФОКУС (A11Y) */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 16px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  z-index: 10000;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 87, 184, 0.4);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* Кнопка-гамбургер для мобильной навигации */
+.site-header__menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header__menu-icon,
+.site-header__menu-icon::before,
+.site-header__menu-icon::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  position: relative;
+}
+
+.site-header__menu-icon::before,
+.site-header__menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.site-header__menu-icon::before {
+  top: -6px;
+}
+
+.site-header__menu-icon::after {
+  bottom: -6px;
+}
+
+/* Адаптивная обертка для широких таблиц */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 3. КОМПАКТНЫЕ СМАРТФОНЫ И ПЛАНШЕТЫ (< 768PX) */
+@media (max-width: 767.98px) {
+  /* Шапка и мобильное бургер-меню */
+  .site-header__menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+  }
+
+  .site-header__search {
+    order: 3;
+    width: 100%;
+    margin-top: var(--space-xs);
+  }
+
+  .site-header__search-input {
+    width: 100%;
+  }
+
+  .site-nav {
+    display: none;
+    order: 4;
+    width: 100%;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  }
+
+  .site-nav.site-nav--open {
+    display: block;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xs);
+  }
+
+  .site-nav__link {
+    display: block;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link:focus-visible {
+    background-color: var(--color-surface-muted);
+  }
+
+  /* Hero-секция */
+  .hero {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .hero__image-wrapper {
+    order: -1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Сетка преимуществ */
+  .advantages__grid,
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Сетка каталога */
+  .catalog__grid,
+  .products-grid,
+  .popular-products__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* Страница товара: детальная карточка */
+  .product-detail,
+  .product-view {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .product-detail__gallery {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .product-detail__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-detail__actions .button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Карточное представление таблицы характеристик на смартфонах */
+  .product-specs__table,
+  .product-table {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .product-specs__table thead,
+  .product-table thead {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+  }
+
+  .product-specs__table tbody,
+  .product-table tbody {
+    display: block;
+  }
+
+  .product-specs__table tr,
+  .product-table tr {
+    display: block;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .product-specs__table td,
+  .product-specs__table th,
+  .product-table td,
+  .product-table th {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px dashed var(--color-surface-muted);
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  .product-specs__table tr td:last-child,
+  .product-table tr td:last-child {
+    border-bottom: none;
+  }
+
+  .product-specs__table td::before,
+  .product-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-align: left;
+    margin-right: var(--space-md);
+    flex-shrink: 0;
+  }
+
+  /* Форма оформления заказа */
+  .order-layout,
+  .order-form__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .order-form__row {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .order-form__field {
+    width: 100%;
+  }
+
+  .order-form__input,
+  .order-form__select,
+  .order-form__textarea {
+    min-height: 48px;
+    font-size: 16px; /* Предотвращение зума в iOS */
+  }
+
+  .order-form__submit {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Подвал сайта */
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+
+  /* Модальное окно */
+  .modal__content {
+    width: 94%;
+    padding: var(--space-lg);
+    margin: 16px auto;
+  }
+}
+
+/* 4. СРЕДНИЕ ЭКРАНЫ И ПЛАНШЕТЫ (768PX – 991.98PX) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .site-header__menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    order: 4;
+    width: 100%;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+  }
+
+  .site-nav.site-nav--open {
+    display: block;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .advantages__grid,
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog__grid,
+  .products-grid,
+  .popular-products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-filters {
+    margin-bottom: var(--space-lg);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 5. НОУТБУКИ И ДЕСКТОПЫ (992PX – 1199.98PX) */
+@media (min-width: 992px) {
+  .site-header__menu-toggle {
+    display: none !important;
+  }
+
+  .site-nav {
+    display: block !important;
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .catalog__grid,
+  .products-grid,
+  .popular-products__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalog-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* 6. ШИРОКОФОРМАТНЫЕ МОНИТОРЫ (>= 1200PX) */
+@media (min-width: 1200px) {
+  .catalog__grid,
+  .popular-products__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+}
+
+/* 7. УЗКИЕ МОБИЛЬНЫЕ УСТРОЙСТВА (360PX – 430PX) */
+@media (max-width: 430px) {
+  .site-header__logo span {
+    font-size: 1rem;
+  }
+
+  .site-header__actions {
+    gap: var(--space-xs);
+  }
+
+  .site-header__action-btn {
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .product-card {
+    padding: var(--space-sm);
+  }
+
+  .product-card__title {
+    font-size: 1rem;
+  }
+
+  .product-card__price-current {
+    font-size: 1.15rem;
+  }
+}
