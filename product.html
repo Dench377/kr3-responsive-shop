@@ -3,470 +3,364 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aura Sound Master Pro — Интернет-магазин Aura Sound</title>
-  <!-- 1. ПОДКЛЮЧЕНИЕ BOOTSTRAP ЛОКАЛЬНО -->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  <!-- 2. ПОДКЛЮЧЕНИЕ КАСТОМНЫХ СТИЛЕЙ -->
-  <link rel="stylesheet" href="css/custom.css">
+  <meta name="description" content="Флагманские беспроводные наушники Aura Pro Max Space Black с активным шумоподавлением.">
+  <title>Aura Pro Max Space Black — Aura Sound</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-
-  <!-- 3. ШАПКА И НАВИГАЦИЯ -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+<body id="top">
+  <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Aura Sound Главная">
+        <svg class="site-header__logo-icon" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2zm-4 3h2v4H7zm8 0h2v4h-2z"/>
         </svg>
-        Aura Sound
+        <span>AURA SOUND</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
-        <span class="navbar-toggler-icon"></span>
+
+      <button class="site-header__menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="site-header__menu-icon" aria-hidden="true"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="product.html">Товар</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Оформление заказа</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
-          </li>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+          <li class="site-nav__item"><a href="product.html" class="site-nav__link site-nav__link--active" aria-current="page">Товар</a></li>
+          <li class="site-nav__item"><a href="order.html" class="site-nav__link">Оформление заявки</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+          <li class="site-nav__item"><a href="about.html" class="site-nav__link">О нас</a></li>
         </ul>
+      </nav>
 
-        <div class="d-flex align-items-center gap-2">
-          <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
-            Быстрая заявка
-          </button>
-          <a href="order.html" class="btn btn-primary btn-sm position-relative">
-            Корзина
-            <span class="badge bg-danger rounded-pill ms-1">3</span>
-          </a>
+      <div class="site-header__actions">
+        <div class="site-header__search">
+          <svg class="site-header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" class="site-header__search-input" placeholder="Поиск техники..." aria-label="Поиск по сайту">
         </div>
+
+        <a href="#order-modal" data-modal-open class="site-header__action-btn" title="Быстрый заказ" aria-label="Быстрый заказ">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+
+        <a href="order.html" class="site-header__action-btn" title="Корзина" aria-label="Корзина">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="site-header__cart-badge">3</span>
+        </a>
       </div>
     </div>
-  </nav>
-
-  <!-- 4. ХЛЕБНЫЕ КРОШКИ (BREADCRUMB) -->
-  <div class="bg-light py-2 border-bottom">
+  </header>
+  <main id="main-content" class="main">
     <div class="container">
       <nav aria-label="Хлебные крошки">
-        <ol class="breadcrumb mb-0 small">
-          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Главная</a></li>
-          <li class="breadcrumb-item"><a href="catalog.html" class="text-decoration-none">Каталог</a></li>
-          <li class="breadcrumb-item"><a href="catalog.html" class="text-decoration-none">Беспроводные наушники</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Aura Sound Master Pro</li>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__separator">/</li>
+          <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></li>
+          <li class="breadcrumbs__separator">/</li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Aura Pro Max Space Black</span></li>
         </ol>
       </nav>
-    </div>
-  </div>
 
-  <main class="container my-4">
-    <!-- 5. КАРТОЧКА ТОВАРА: ФОТО + ЦЕНА И ПАРАМЕТРЫ -->
-    <div class="row g-4 mb-5">
-      <!-- 5.1. ГАЛЕРЕЯ ТОВАРА -->
-      <div class="col-12 col-lg-6">
-        <div class="card border-0 shadow-sm p-3 text-center">
-          <img src="images/product-headphones-black.svg" class="img-fluid product-gallery-main mb-3" alt="Aura Sound Master Pro вид спереди">
-          <div class="d-flex justify-content-center gap-2">
-            <button type="button" class="btn btn-outline-secondary active p-1 rounded-3">
-              <img src="images/product-headphones-black.svg" alt="Цвет Черный" style="width: 50px; height: 50px; object-fit: contain;">
-            </button>
-            <button type="button" class="btn btn-outline-secondary p-1 rounded-3">
-              <img src="images/product-headphones-silver.svg" alt="Цвет Серебро" style="width: 50px; height: 50px; object-fit: contain;">
-            </button>
+      <article class="product-detail-layout">
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-2xl); text-align: center;">
+          <div style="position: relative; margin-bottom: var(--space-xl);">
+            <span class="badge badge--hit" style="position: absolute; top: 0; left: 0;">Флагман 2026</span>
+            <picture>
+              <source media="(max-width: 640px)" srcset="images/hero-headphones.svg 400w" sizes="(max-width: 640px) 90vw, 400px">
+              <source media="(min-width: 641px)" srcset="images/hero-headphones.svg 800w" sizes="(min-width: 641px) 50vw, 800px">
+              <img src="images/hero-headphones.svg" alt="Беспроводные наушники Aura Pro Max Space Black" style="max-height: 380px; margin: 0 auto; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));" width="400" height="380" loading="eager">
+            </picture>
           </div>
-        </div>
-      </div>
 
-      <!-- 5.2. ИНФОРМАЦИЯ О ТОВАРЕ, ЦЕНА И ДЕЙСТВИЯ -->
-      <div class="col-12 col-lg-6 d-flex flex-column">
-        <div class="mb-2">
-          <span class="badge bg-warning text-dark me-1">Хит продаж</span>
-          <span class="badge bg-success me-1">В наличии (осталось 5 шт)</span>
-          <span class="badge bg-secondary">Арт. AS-8802</span>
-        </div>
-
-        <h1 class="h2 fw-bold mb-2">Беспроводные наушники Aura Sound Master Pro</h1>
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <span class="text-warning">★★★★★</span>
-          <span class="text-muted small">4.9 / 5.0 (48 отзывов покупателей)</span>
-        </div>
-
-        <p class="text-muted">
-          Флагманские беспроводные наушники премиум-класса с гибридной системой активного шумоподавления (ANC 45 дБ), 40-мм бериллиевыми драйверами и поддержкой кодеков сверхвысокого разрешения LDAC и aptX HD.
-        </p>
-
-        <!-- Блок стоимости -->
-        <div class="card bg-light border-0 p-3 mb-4 rounded-3">
-          <div class="d-flex align-items-baseline gap-3 mb-1">
-            <span class="display-6 fw-bold text-primary">24 990 ₽</span>
-            <span class="text-muted text-decoration-line-through fs-5">29 990 ₽</span>
-            <span class="badge bg-danger fs-6">-17%</span>
-          </div>
-          <small class="text-muted">Гарантия лучшей цены от официального импортера</small>
-        </div>
-
-        <!-- Выбор параметров -->
-        <div class="mb-3">
-          <label class="form-label fw-semibold small text-uppercase text-muted">Цвет корпуса:</label>
-          <div class="d-flex gap-2">
-            <button type="button" class="btn btn-outline-dark btn-sm active">Матовый черный</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm">Анодированное серебро</button>
+          <div style="display: flex; justify-content: center; gap: 12px;">
+            <div style="width: 70px; height: 70px; border: 2px solid var(--color-primary); border-radius: var(--radius-md); padding: 6px; background: var(--color-surface-muted);">
+              <img src="images/product-headphones-black.svg" alt="Ракурс 1" style="height: 100%; object-fit: contain;">
+            </div>
+            <div style="width: 70px; height: 70px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 6px; background: var(--color-surface-muted);">
+              <img src="images/product-headphones-silver.svg" alt="Ракурс 2" style="height: 100%; object-fit: contain;">
+            </div>
+            <div style="width: 70px; height: 70px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 6px; background: var(--color-surface-muted);">
+              <img src="images/hero-headphones.svg" alt="Ракурс 3" style="height: 100%; object-fit: contain;">
+            </div>
           </div>
         </div>
 
-        <div class="mb-4">
-          <label class="form-label fw-semibold small text-uppercase text-muted">Комплектация:</label>
-          <select class="form-select form-select-sm" style="max-width: 320px;">
-            <option selected>Стандартная (кейс + кабель 3.5мм)</option>
-            <option>Audiophile Pack (+ балансный кабель 4.4мм OCC)</option>
-          </select>
-        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <span class="badge badge--stock">В наличии (7 шт.)</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-light);">Артикул: AR-900-BLK</span>
+          </div>
 
-        <!-- Кнопки действий -->
-        <div class="d-flex flex-wrap gap-3 mt-auto">
-          <a href="order.html" class="btn btn-primary btn-lg px-4 flex-grow-1">
-            Добавить в корзину
-          </a>
-          <button type="button" class="btn btn-outline-dark btn-lg px-4" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
-            Купить в 1 клик
-          </button>
-        </div>
+          <h1 style="font-size: 1.85rem; margin-bottom: 12px;">Беспроводные наушники Aura Pro Max Space Black</h1>
 
-        <!-- Преимущества сервиса -->
-        <div class="row g-2 mt-4 pt-3 border-top text-muted small">
-          <div class="col-6">✓ Бесплатная доставка курьером</div>
-          <div class="col-6">✓ Официальная гарантия 2 года</div>
-          <div class="col-6">✓ Примерка перед покупкой</div>
-          <div class="col-6">✓ 14 дней на возврат без вопросов</div>
-        </div>
-      </div>
-    </div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: var(--space-lg);">
+            <div class="product-card__stars" style="color: #f59e0b;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <strong style="font-size: 0.875rem;">4.9 из 5.0</strong>
+            <span style="color: var(--color-text-light); font-size: 0.875rem;">(128 проверенных отзывов)</span>
+          </div>
 
-    <!-- 6. ВКЛАДКИ (NAV-TABS): ОПИСАНИЕ / ХАРАКТЕРИСТИКИ / ОТЗЫВЫ -->
-    <section class="card shadow-sm p-4 mb-5 border-0">
-      <ul class="nav nav-tabs mb-4" id="productTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active fw-semibold" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc-tab-pane" type="button" role="tab" aria-controls="desc-tab-pane" aria-selected="true">
-            Описание
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-semibold" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs-tab-pane" type="button" role="tab" aria-controls="specs-tab-pane" aria-selected="false">
-            Характеристики
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-semibold" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" type="button" role="tab" aria-controls="reviews-tab-pane" aria-selected="false">
-            Отзывы (48)
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-semibold" id="delivery-tab" data-bs-toggle="tab" data-bs-target="#delivery-tab-pane" type="button" role="tab" aria-controls="delivery-tab-pane" aria-selected="false">
-            Доставка и гарантия
-          </button>
-        </li>
-      </ul>
+          <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-lg); margin-bottom: var(--space-xl);">
+            <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px;">
+              <span style="font-size: 2rem; font-weight: 800; color: var(--color-text);">34 990 ₽</span>
+              <span style="font-size: 1.1rem; color: var(--color-text-light); text-decoration: line-through;">39 990 ₽</span>
+              <span class="badge badge--discount">Выгода 5 000 ₽</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--color-accent-secondary); font-weight: 600; margin-bottom: 0;">
+              ✓ В рассрочку от 2 915 ₽ / месяц без переплат
+            </p>
+          </div>
 
-      <div class="tab-content" id="productTabContent">
-        <!-- 6.1. ВКЛАДКА: ОПИСАНИЕ -->
-        <div class="tab-pane fade show active" id="desc-tab-pane" role="tabpanel" aria-labelledby="desc-tab" tabindex="0">
-          <h4 class="fw-bold mb-3">Студийная точность и максимальный комфорт</h4>
-          <p>
-            Aura Sound Master Pro разработаны для самых требовательных ценителей аутентичного звучания. 
-            Благодаря кастомным 40-миллиметровым драйверам с напылением из чистого бериллия наушники воспроизводят ультраширокий частотный диапазон от 10 Гц до 45 000 Гц с минимальным коэффициентом нелинейных искажений (<0.08%).
+          <p style="color: var(--color-text-muted); font-size: 0.925rem; line-height: 1.6; margin-bottom: var(--space-lg);">
+            Aura Pro Max — это вершина инженерной акустической мысли. Оснащены гибридным 6-микрофонным шумоподавлением ANC, титановыми драйверами и поддержкой Hi-Res кодека высокой плотности LDAC.
           </p>
-          <p>
-            Система гибридного активного шумоподавления на базе 6 внешних и внутренних микрофонов отсекает до 98% окружающего шума в самолете, метро и шумном офисе. 
-            Режим звуковой прозрачности (Ambient Aware) позволяет вести естественный диалог, не снимая наушников.
-          </p>
-          <div class="row g-3 mt-2">
-            <div class="col-12 col-md-4">
-              <div class="p-3 bg-light rounded text-center">
-                <div class="fw-bold fs-4 text-primary">До 40 ч</div>
-                <div class="text-muted small">Автономной работы на одном заряде</div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="p-3 bg-light rounded text-center">
-                <div class="fw-bold fs-4 text-primary">45 дБ</div>
-                <div class="text-muted small">Глубина активного шумоподавления</div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="p-3 bg-light rounded text-center">
-                <div class="fw-bold fs-4 text-primary">260 г</div>
-                <div class="text-muted small">Облегченная титановая конструкция</div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 6.2. ВКЛАДКА: ХАРАКТЕРИСТИКИ (BOOTSTRAP-ТАБЛИЦА) -->
-        <div class="tab-pane fade" id="specs-tab-pane" role="tabpanel" aria-labelledby="specs-tab" tabindex="0">
-          <h4 class="fw-bold mb-3">Технические характеристики</h4>
-          <div class="table-responsive">
-            <table class="table table-striped table-hover align-middle">
-              <tbody>
-                <tr>
-                  <th scope="row" style="width: 35%;">Тип конструкции</th>
-                  <td>Полноразмерные, закрытые</td>
-                </tr>
-                <tr>
-                  <th scope="row">Диаметр мембраны</th>
-                  <td>40 мм (бериллиевое напыление)</td>
-                </tr>
-                <tr>
-                  <th scope="row">Частотный диапазон</th>
-                  <td>10 Гц – 45 000 Гц (Hi-Res Audio Certified)</td>
-                </tr>
-                <tr>
-                  <th scope="row">Сопротивление (импеданс)</th>
-                  <td>32 Ом</td>
-                </tr>
-                <tr>
-                  <th scope="row">Чувствительность</th>
-                  <td>108 дБ / мВт</td>
-                </tr>
-                <tr>
-                  <th scope="row">Версия Bluetooth</th>
-                  <td>5.4 (Multipoint на 2 устройства)</td>
-                </tr>
-                <tr>
-                  <th scope="row">Поддерживаемые кодеки</th>
-                  <td>LDAC, aptX Adaptive, aptX HD, AAC, SBC</td>
-                </tr>
-                <tr>
-                  <th scope="row">Шумоподавление (ANC)</th>
-                  <td>Гибридное адаптивное, до -45 дБ</td>
-                </tr>
-                <tr>
-                  <th scope="row">Время автономной работы</th>
-                  <td>40 часов с ANC / 55 часов без ANC</td>
-                </tr>
-                <tr>
-                  <th scope="row">Быстрая зарядка</th>
-                  <td>15 минут зарядки дают 5 часов воспроизведения</td>
-                </tr>
-                <tr>
-                  <th scope="row">Разъем зарядки и проводного звука</th>
-                  <td>USB Type-C + аналоговый вход 3.5 мм / 4.4 мм</td>
-                </tr>
-                <tr>
-                  <th scope="row">Вес</th>
-                  <td>260 г</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- 6.3. ВКЛАДКА: ОТЗЫВЫ -->
-        <div class="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabindex="0">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div>
-              <h4 class="fw-bold mb-1">Отзывы реальных владельцев</h4>
-              <div class="text-warning">★★★★★ <span class="text-muted small ms-2">4.9 из 5.0 на основе 48 оценок</span></div>
-            </div>
-            <button class="btn btn-outline-primary btn-sm" type="button">Написать отзыв</button>
-          </div>
-
-          <div class="card mb-3 border-0 bg-light">
-            <div class="card-body">
-              <div class="d-flex justify-content-between mb-2">
-                <span class="fw-bold">Алексей М., звукорежиссер</span>
-                <span class="text-muted small">12 октября 2026</span>
-              </div>
-              <div class="text-warning small mb-2">★★★★★</div>
-              <p class="card-text small mb-0">
-                Поразительная детализация сцены. По LDAC с плеера Fiio играют в одном ряду с проводными студийными мониторами. Шумодав мягкий, без давления на барабанные перепонки.
-              </p>
-            </div>
-          </div>
-
-          <div class="card mb-3 border-0 bg-light">
-            <div class="card-body">
-              <div class="d-flex justify-content-between mb-2">
-                <span class="fw-bold">Екатерина С.</span>
-                <span class="text-muted small">28 сентября 2026</span>
-              </div>
-              <div class="text-warning small mb-2">★★★★★</div>
-              <p class="card-text small mb-0">
-                Очень удобная посадка, не давят на голову даже после 6 часов непрерывной работы. Заряд держат феноменально долго — заряжаю раз в неделю.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6.4. ВКЛАДКА: ДОСТАВКА И ГАРАНТИЯ -->
-        <div class="tab-pane fade" id="delivery-tab-pane" role="tabpanel" aria-labelledby="delivery-tab" tabindex="0">
-          <h4 class="fw-bold mb-3">Условия доставки и сервиса</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-transparent px-0">
-              <strong>Курьерская экспресс-доставка по Москве:</strong> бесплатно сегодня при заказе до 16:00.
+          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem; color: var(--color-text); margin-bottom: var(--space-xl);">
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: var(--color-success); font-weight: bold;">✓</span>
+              <span><strong>Титановые 40-мм драйверы</strong> с диапазоном 5 Гц – 45 кГц</span>
             </li>
-            <li class="list-group-item bg-transparent px-0">
-              <strong>Доставка по России:</strong> СДЭК, Boxberry или Почта России (1-4 рабочих дня).
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: var(--color-success); font-weight: bold;">✓</span>
+              <span><strong>Гибридный ANC</strong> с глубиной до -45 дБ</span>
             </li>
-            <li class="list-group-item bg-transparent px-0">
-              <strong>Самовывоз из шоурума:</strong> Москва, проспект Вернадского, 78 (бесплатно, ежедневно с 10:00 до 21:00).
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: var(--color-success); font-weight: bold;">✓</span>
+              <span><strong>Поддержка LDAC</strong> со скоростью до 990 кбит/с</span>
             </li>
-            <li class="list-group-item bg-transparent px-0">
-              <strong>Гарантия:</strong> официальная гарантия 2 года от сервисного центра Aura Sound.
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <span style="color: var(--color-success); font-weight: bold;">✓</span>
+              <span><strong>До 65 часов работы</strong> без подзарядки</span>
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- 7. РЕКОМЕНДУЕМЫЕ ТОВАРЫ (СЕТКА КАРТОЧЕК) -->
-    <section class="mb-5">
-      <h3 class="fw-bold mb-4">С этим товаром покупают</h3>
-      <div class="row g-4">
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card h-100 product-card shadow-sm">
-            <img src="images/product-dac.svg" class="card-img-top product-card-img" alt="ЦАП Aura Precision D1">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fs-6 fw-bold">Aura Precision DAC D1</h5>
-              <div class="text-muted small mb-2">Балансный портативный ЦАП</div>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <span class="fs-5 fw-bold text-primary">15 990 ₽</span>
-                <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
-              </div>
-            </div>
+          <div style="display: flex; gap: var(--space-md); margin-bottom: var(--space-xl);">
+            <a href="order.html" class="button button--primary button--lg" style="flex: 1.5;">Оформить заявку</a>
+            <a href="#order-modal" data-modal-open class="button button--outline button--lg" style="flex: 1;">Купить в 1 клик</a>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 0.75rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+            <div><strong>🚚 Доставка:</strong> Бесплатно по РФ</div>
+            <div><strong>🛡 Гарантия:</strong> 2 года в сервисе</div>
+            <div><strong>🔄 Возврат:</strong> 14 дней на тест</div>
           </div>
         </div>
+      </article>
 
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card h-100 product-card shadow-sm">
-            <img src="images/product-cables.svg" class="card-img-top product-card-img" alt="Кабель Aura OCC">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fs-6 fw-bold">Aura Silver OCC 4.4mm</h5>
-              <div class="text-muted small mb-2">Кабель из монокристаллической меди</div>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <span class="fs-5 fw-bold text-primary">4 990 ₽</span>
-                <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section id="specs" style="margin-top: var(--space-3xl); margin-bottom: var(--space-3xl);" aria-label="Сравнение характеристик">
+        <header class="section__header section__header--left">
+          <span class="section__tag">Технический паспорт</span>
+          <h2>Сравнение характеристик флагманских моделей</h2>
+          <p class="section__subtitle">Сравнение параметров Aura Pro Max с другими моделями линейки и базовыми аналогами.</p>
+        </header>
 
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card h-100 product-card shadow-sm">
-            <img src="images/product-speaker.svg" class="card-img-top product-card-img" alt="Акустика Studio Monitor">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fs-6 fw-bold">Aura Studio Monitor X1</h5>
-              <div class="text-muted small mb-2">Активные студийные мониторы</div>
-              <div class="mt-auto d-flex justify-content-between align-items-center">
-                <span class="fs-5 fw-bold text-primary">18 990 ₽</span>
-                <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
-              </div>
-            </div>
-          </div>
+        <div class="table-wrapper">
+          <table class="table">
+            <caption class="table__caption">Сводная таблица параметров и акустических характеристик</caption>
+            <thead>
+              <tr>
+                <th scope="col" style="width: 28%;">Параметр</th>
+                <th scope="col" style="width: 24%; color: var(--color-primary); font-weight: 800;">Aura Pro Max (Флагман)</th>
+                <th scope="col" style="width: 24%;">Aura Studio Wireless</th>
+                <th scope="col" style="width: 24%;">Обычные беспроводные</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Частотный диапазон</th>
+                <td data-label="Aura Pro Max"><strong>5 Гц — 45 000 Гц (Hi-Res)</strong></td>
+                <td data-label="Aura Studio">15 Гц — 28 000 Гц</td>
+                <td data-label="Обычные">20 Гц — 20 000 Гц</td>
+              </tr>
+              <tr>
+                <th scope="row">Излучатель</th>
+                <td data-label="Aura Pro Max">40 мм, титановый композит</td>
+                <td data-label="Aura Studio">40 мм, биоцеллюлоза</td>
+                <td data-label="Обычные">32 мм, майлар</td>
+              </tr>
+              <tr>
+                <th scope="row">Шумоподавление (ANC)</th>
+                <td data-label="Aura Pro Max"><span class="table__check">✓ Гибридный ANC (-45 дБ, 6 микрофонов)</span></td>
+                <td data-label="Aura Studio"><span class="table__check">✓ Базовый ANC (-30 дБ)</span></td>
+                <td data-label="Обычные"><span class="table__dash">— Пассивное</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Кодеки</th>
+                <td data-label="Aura Pro Max"><strong>LDAC, aptX Adaptive, AAC, SBC</strong></td>
+                <td data-label="Aura Studio">aptX, AAC, SBC</td>
+                <td data-label="Обычные">SBC, AAC</td>
+              </tr>
+              <tr>
+                <th scope="row">Автономность</th>
+                <td data-label="Aura Pro Max"><strong>До 65 часов (45 ч с ANC)</strong></td>
+                <td data-label="Aura Studio">До 40 часов (30 ч с ANC)</td>
+                <td data-label="Обычные">До 20 часов</td>
+              </tr>
+              <tr>
+                <th scope="row">Быстрая зарядка</th>
+                <td data-label="Aura Pro Max"><span class="table__check">✓ 10 мин = 5 часов работы</span></td>
+                <td data-label="Aura Studio"><span class="table__check">✓ 15 мин = 2.5 часа работы</span></td>
+                <td data-label="Обычные"><span class="table__dash">— Нет (2.5 ч до 100%)</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Материалы корпуса</th>
+                <td data-label="Aura Pro Max">Авиационный алюминий, натуральная кожа</td>
+                <td data-label="Aura Studio">Матовый алюминий, экокожа</td>
+                <td data-label="Обычные">Пластик</td>
+              </tr>
+              <tr>
+                <th scope="row">Интерфейс</th>
+                <td data-label="Aura Pro Max">Bluetooth 5.4 + USB-C DAC + 3.5 мм AUX</td>
+                <td data-label="Aura Studio">Bluetooth 5.3 + 3.5 мм AUX</td>
+                <td data-label="Обычные">Bluetooth 5.0</td>
+              </tr>
+              <tr>
+                <th scope="row">Масса</th>
+                <td data-label="Aura Pro Max">255 грамм</td>
+                <td data-label="Aura Studio">238 грамм</td>
+                <td data-label="Обычные">275 грамм</td>
+              </tr>
+              <tr>
+                <th scope="row">Гарантия</th>
+                <td data-label="Aura Pro Max"><strong style="color: var(--color-success);">24 месяца (2 года)</strong></td>
+                <td data-label="Aura Studio">24 месяца (2 года)</td>
+                <td data-label="Обычные">12 месяцев</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row">Итоговая цена</th>
+                <td data-label="Aura Pro Max"><strong style="color: var(--color-primary); font-size: 1.1rem;">34 990 ₽</strong></td>
+                <td data-label="Aura Studio"><strong>26 490 ₽</strong></td>
+                <td data-label="Обычные"><strong>~ 18 990 ₽</strong></td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
-
-  <!-- 8. ПОДВАЛ (FOOTER) -->
-  <footer class="text-white pt-5 pb-4 mt-auto">
+  <footer class="site-footer" id="contacts">
     <div class="container">
-      <div class="row g-4 mb-4">
-        <div class="col-12 col-md-4">
-          <h5 class="fw-bold text-uppercase mb-3">Aura Sound</h5>
-          <p class="text-secondary small">Интернет-магазин премиальной аудиотехники. Официальный дилер ведущих мировых аудио-брендов в России.</p>
-          <div class="text-secondary small">Москва, проспект Вернадского, 78 (РТУ МИРЭА)</div>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-header__logo site-footer__logo">
+            <svg class="site-header__logo-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2zm-4 3h2v4H7zm8 0h2v4h-2z"/>
+            </svg>
+            <span>AURA SOUND</span>
+          </a>
+          <p class="site-footer__text">
+            Инновационная аудиотехника для тех, кто ценит чистоту звука, передовые технологии и бескомпромиссный комфорт.
+          </p>
+          <div class="site-footer__socials">
+            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="site-footer__social-link" title="Telegram" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+            </a>
+            <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="site-footer__social-link" title="VKontakte" aria-label="VKontakte">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91h-1.62c-.61 0-.8-.49-1.9-1.59-1-.96-1.44-1.08-1.69-1.08-.34 0-.44.1-.44.59v1.43c0 .39-.12.65-1.15.65-1.7 0-3.59-1.03-4.92-2.95-2-2.85-2.55-5-2.55-5.44 0-.25.1-.48.59-.48h1.62c.44 0 .61.2.78.68.85 2.49 2.28 4.67 2.87 4.67.22 0 .32-.1.32-.66v-2.56c-.07-1.18-.69-1.28-.69-1.7 0-.2.17-.4.44-.4h2.55c.37 0 .5.2.5.64v3.47c0 .37.17.5.27.5.22 0 .4-.13.82-.55 1.27-1.42 2.18-3.63 2.18-3.63.12-.25.32-.47.76-.47h1.62c.49 0 .6.25.49.64-.2 0.93-2.15 3.69-2.25 3.86-.2.32-.28.46 0 .83.2.27.87.85 1.32 1.37.82.93 1.45 1.72 1.62 2.27.17.54-.1.82-.59.82z"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <h6 class="fw-bold mb-3">Разделы</h6>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none">Главная</a></li>
-            <li class="mb-2"><a href="catalog.html" class="text-secondary text-decoration-none">Каталог</a></li>
-            <li class="mb-2"><a href="product.html" class="text-secondary text-decoration-none">Товар</a></li>
-            <li class="mb-2"><a href="order.html" class="text-secondary text-decoration-none">Заказ</a></li>
+
+        <div>
+          <h4 class="site-footer__col-title">Каталог</h4>
+          <ul class="site-footer__links">
+            <li><a href="catalog.html" class="site-footer__link">Беспроводные наушники</a></li>
+            <li><a href="catalog.html" class="site-footer__link">TWS-вкладыши</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Виниловые проигрыватели</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Портативная акустика</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Усилители и ЦАП</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md-2">
-          <h6 class="fw-bold mb-3">Информация</h6>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">О нас</a></li>
-            <li class="mb-2"><a href="contacts.html" class="text-secondary text-decoration-none">Контакты</a></li>
-            <li class="mb-2"><a href="index.html#faqAccordion" class="text-secondary text-decoration-none">FAQ</a></li>
+
+        <div>
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__links">
+            <li><a href="index.html" class="site-footer__link">Главная страница</a></li>
+            <li><a href="product.html" class="site-footer__link">Страница товара</a></li>
+            <li><a href="order.html" class="site-footer__link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__link">Контакты</a></li>
+            <li><a href="about.html" class="site-footer__link">О компании</a></li>
+            <li><a href="index.html#advantages" class="site-footer__link">Преимущества</a></li>
+            <li><a href="index.html#popular" class="site-footer__link">Популярные товары</a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-4">
-          <h6 class="fw-bold mb-3">Контакты</h6>
-          <p class="text-secondary small mb-1">Горячая линия: +7 (495) 788-99-00</p>
-          <p class="text-secondary small mb-1">Email: info@aurasound.ru</p>
-          <p class="text-secondary small">Ежедневно с 10:00 до 21:00</p>
+
+        <div>
+          <h4 class="site-footer__col-title">Контакты</h4>
+          <address class="site-footer__text">
+            <p style="margin-bottom: 8px;"><strong>Адрес:</strong> г. Москва, пр-т Вернадского, 78</p>
+            <p style="margin-bottom: 8px;"><strong>Телефон:</strong> <a href="tel:+74950000000" class="site-footer__link" style="color: #60a5fa;">+7 (495) 000-00-00</a></p>
+            <p style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:info@aurasound.ru" class="site-footer__link">info@aurasound.ru</a></p>
+            <p style="margin-bottom: 0;"><strong>Часы:</strong> Ежедневно 10:00 – 22:00</p>
+          </address>
         </div>
       </div>
-      <hr class="border-secondary">
-      <div class="d-flex flex-wrap justify-content-between align-items-center small text-secondary">
-        <div>© 2026 Aura Sound. Контрольная работа №2 по курсу «Фронтенд и бэкенд разработка».</div>
-        <div>Студент: Сидорович Д.С., группа ЭФБО-17-25</div>
+
+      <div class="site-footer__bottom">
+        <div>
+          &copy; 2026 Aura Sound. РТУ МИРЭА, ИПТИП, Кафедра Индустриального программирования.
+        </div>
+        <div class="site-footer__author">
+          Преподаватель: Загородних Н. А.
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- 9. МОДАЛЬНОЕ ОКНО БЫСТРОГО ЗАКАЗА (MODAL) -->
-  <div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title fw-bold" id="quickOrderModalLabel">Быстрый заказ в 1 клик</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+  <aside id="order-modal" class="modal" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <a href="#main-content" data-modal-close class="modal__overlay" aria-label="Закрыть окно"></a>
+    <div class="modal__dialog">
+      <a href="#main-content" data-modal-close class="modal__close" aria-label="Закрыть">&times;</a>
+      <header class="modal__header">
+        <h3 id="modal-title" class="modal__title">Быстрый заказ в 1 клик</h3>
+        <p class="modal__subtitle">Оставьте ваши контакты, и мы перезвоним в течение 10 минут.</p>
+      </header>
+      <form action="order.html" method="get" class="order-form" style="padding: 0; border: none; box-shadow: none;">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Иванов" required minlength="2">
         </div>
-        <form action="order.html" method="get">
-          <div class="modal-body">
-            <div class="d-flex gap-3 align-items-center mb-3 p-2 bg-light rounded">
-              <img src="images/product-headphones-black.svg" alt="Aura Sound Master Pro" style="width: 50px; height: 50px; object-fit: contain;">
-              <div>
-                <div class="fw-bold small">Aura Sound Master Pro</div>
-                <div class="text-primary fw-bold">24 990 ₽</div>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="productModalName" class="form-label">Ваше имя *</label>
-              <input type="text" class="form-control" id="productModalName" name="name" required placeholder="Иван Иванов">
-            </div>
-            <div class="mb-3">
-              <label for="productModalPhone" class="form-label">Номер телефона *</label>
-              <div class="input-group">
-                <span class="input-group-text">+7</span>
-                <input type="tel" class="form-control" id="productModalPhone" name="phone" required placeholder="(999) 000-00-00">
-              </div>
-            </div>
-            <div class="form-check mb-2">
-              <input class="form-check-input" type="checkbox" id="productModalAgree" name="agree" required checked>
-              <label class="form-check-label small" for="productModalAgree">
-                Согласен на обработку персональных данных *
-              </label>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-            <button type="submit" class="btn btn-primary">Подтвердить заказ</button>
-          </div>
-        </form>
-      </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Номер телефона <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-product" class="order-form__label">Выбранный товар</label>
+          <select id="modal-product" name="product" class="order-form__select">
+            <option value="aura-pro-max">Aura Pro Max Space Black (34 990 ₽)</option>
+            <option value="aura-silver">Aura Studio Silver Edition (26 490 ₽)</option>
+            <option value="aura-pods">Aura Pods Pro Wireless (15 990 ₽)</option>
+            <option value="aura-deck">Aura Hi-Fi Vinyl Deck Master (48 900 ₽)</option>
+          </select>
+        </div>
+        <div class="order-form__checkbox-wrapper">
+          <input type="checkbox" id="modal-agree" name="agree" class="order-form__checkbox" required checked>
+          <label for="modal-agree">Я согласен на обработку персональных данных</label>
+        </div>
+        <button type="submit" class="button button--primary button--block button--lg">Подтвердить заявку</button>
+      </form>
     </div>
-  </div>
-
-  <!-- 10. ПОДКЛЮЧЕНИЕ BOOTSTRAP JS BUNDLE ЛОКАЛЬНО -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </aside>
+  <a href="#top" class="button-top" title="Наверх" aria-label="Вернуться в начало страницы">
+    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </a>
+  <script src="js/main.js"></script>
 </body>
 </html>

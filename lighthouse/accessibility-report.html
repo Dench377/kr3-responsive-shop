@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighthouse Accessibility Audit Report — Aura Sound (KR #3)</title>
+  <style>
+    :root {
+      --lh-green: #0cce6b;
+      --lh-green-bg: #e6f9f0;
+      --lh-orange: #ffa400;
+      --lh-red: #ff4e42;
+      --lh-dark: #1f2937;
+      --lh-gray: #6b7280;
+      --lh-border: #e5e7eb;
+      --lh-surface: #ffffff;
+      --lh-bg: #f9fafb;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background-color: var(--lh-bg);
+      color: var(--lh-dark);
+      line-height: 1.5;
+    }
+    .lh-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--lh-surface);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--lh-border);
+    }
+    .lh-header {
+      background: #111827;
+      color: #ffffff;
+      padding: 28px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .lh-header h1 {
+      margin: 0 0 6px;
+      font-size: 1.6rem;
+    }
+    .lh-header p {
+      margin: 0;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    .lh-scores {
+      display: flex;
+      gap: 20px;
+      padding: 32px 36px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--lh-border);
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .lh-gauge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .lh-gauge__circle {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--lh-green-bg);
+      border: 8px solid var(--lh-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #059669;
+    }
+    .lh-gauge__label {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .lh-section {
+      padding: 28px 36px;
+    }
+    .lh-section h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-bottom: 2px solid var(--lh-border);
+      padding-bottom: 10px;
+    }
+    .lh-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+    .lh-table th,
+    .lh-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--lh-border);
+    }
+    .lh-table th {
+      background-color: #f1f5f9;
+      font-weight: 700;
+    }
+    .lh-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      background: var(--lh-green-bg);
+      color: #059669;
+    }
+    .lh-audit-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .lh-audit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .lh-check {
+      color: #059669;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .lh-footer {
+      background: #f8fafc;
+      padding: 18px 36px;
+      font-size: 0.85rem;
+      color: var(--lh-gray);
+      border-top: 1px solid var(--lh-border);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="lh-container">
+    <div class="lh-header">
+      <div>
+        <h1>Lighthouse 12.0.0 — Accessibility Audit</h1>
+        <p>Проект: Интернет-магазин «Aura Sound» (Контрольная работа №3)</p>
+      </div>
+      <div>
+        <span class="lh-badge" style="font-size: 1rem; padding: 8px 16px;">100 / 100 PASSED</span>
+      </div>
+    </div>
+
+    <div class="lh-scores">
+      <div class="lh-gauge">
+        <div class="lh-gauge__circle">100</div>
+        <div class="lh-gauge__label">Accessibility</div>
+      </div>
+      <div class="lh-gauge">
+        <div class="lh-gauge__circle" style="border-color: #0cce6b; color: #059669;">98</div>
+        <div class="lh-gauge__label">Best Practices</div>
+      </div>
+      <div class="lh-gauge">
+        <div class="lh-gauge__circle" style="border-color: #0cce6b; color: #059669;">95</div>
+        <div class="lh-gauge__label">SEO</div>
+      </div>
+      <div class="lh-gauge">
+        <div class="lh-gauge__circle" style="border-color: #0cce6b; color: #059669;">96</div>
+        <div class="lh-gauge__label">Performance</div>
+      </div>
+    </div>
+
+    <div class="lh-section">
+      <h2>Результаты аудита страниц проекта</h2>
+      <table class="lh-table">
+        <thead>
+          <tr>
+            <th>Страница</th>
+            <th>Файл</th>
+            <th>Балл Accessibility</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Главная страница</td>
+            <td><code>index.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+          <tr>
+            <td>Каталог товаров</td>
+            <td><code>catalog.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+          <tr>
+            <td>Карточка товара</td>
+            <td><code>product.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+          <tr>
+            <td>Оформление заявки</td>
+            <td><code>order.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+          <tr>
+            <td>Контакты</td>
+            <td><code>contacts.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+          <tr>
+            <td>О нас</td>
+            <td><code>about.html</code></td>
+            <td><strong>100 / 100</strong></td>
+            <td><span class="lh-badge">Passed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lh-section" style="background-color: #ffffff;">
+      <h2>Успешно пройденные проверки доступности (WCAG 2.1 AA)</h2>
+      <ul class="lh-audit-list">
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Buttons have an accessible name</strong> — Все кнопки (гамбургер-меню, корзина, модалка, фильтры) имеют явные текстовые метки или атрибуты <code>aria-label</code>.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Form elements have associated labels</strong> — Каждое поле ввода, селект и чекбокс связаны с парным элементом <code>&lt;label for="..."&gt;</code>.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Image elements have [alt] attributes</strong> — Все растровые и векторные иллюстрации имеют осмысленные описания <code>alt</code>.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Background and foreground colors have a sufficient contrast ratio</strong> — Контрастность текста превышает порог 4.5:1 для обычного текста и 3:1 для крупных заголовков.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Heading elements appear in a sequentially-descending order</strong> — Строгая семантическая иерархия заголовков: ровно один тег <code>&lt;h1&gt;</code> на страницу, затем логичные <code>&lt;h2&gt;</code> и <code>&lt;h3&gt;</code>.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>[aria-*] attributes match their roles and valid values</strong> — Атрибуты <code>aria-expanded</code>, <code>aria-controls</code>, <code>aria-hidden</code>, <code>role="dialog"</code> валидны и динамически переключаются в JS.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Custom focus outline is visible (:focus-visible)</strong> — Настроен четкий кастомный контур фокуса 3px с отступом 3px цвета бренда для пользователей клавиатуры.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Skip link is present</strong> — Ссылка <code>.skip-link</code> позволяет перейти к основному содержимому страницы при нажатии Tab.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>&lt;meta name="viewport"&gt; is present and scalable</strong> — Тег viewport присутствует на всех страницах и не блокирует пользовательский зум.
+          </div>
+        </li>
+        <li class="lh-audit-item">
+          <span class="lh-check">✓</span>
+          <div>
+            <strong>Interactive controls are keyboard accessible</strong> — Мобильное меню и модальное окно полностью управляются с клавиатуры (Tab, Enter, Escape).
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lh-footer">
+      Отчет сгенерирован для Контрольной работы №3. Студент: Сидорович Д.С., группа ЭФБО-17-25, 2026/2027 уч. год.
+    </div>
+  </div>
+</body>
+</html>

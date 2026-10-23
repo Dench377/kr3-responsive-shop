@@ -3,362 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оформление заказа — Aura Sound</title>
-  <!-- 1. ПОДКЛЮЧЕНИЕ BOOTSTRAP ЛОКАЛЬНО -->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  <!-- 2. ПОДКЛЮЧЕНИЕ КАСТОМНЫХ СТИЛЕЙ -->
-  <link rel="stylesheet" href="css/custom.css">
+  <meta name="description" content="Страница оформления заявки на заказ техники Aura Sound.">
+  <title>Оформление заявки — Aura Sound</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-
-  <!-- 3. ШАПКА И НАВИГАЦИЯ -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="index.html">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+<body id="top">
+  <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Aura Sound Главная">
+        <svg class="site-header__logo-icon" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2zm-4 3h2v4H7zm8 0h2v4h-2z"/>
         </svg>
-        Aura Sound
+        <span>AURA SOUND</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
-        <span class="navbar-toggler-icon"></span>
+
+      <button class="site-header__menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span class="site-header__menu-icon" aria-hidden="true"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Товар</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="order.html">Оформление заказа</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
-          </li>
+      <nav class="site-nav" id="site-nav" aria-label="Основное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="catalog.html" class="site-nav__link">Каталог</a></li>
+          <li class="site-nav__item"><a href="product.html" class="site-nav__link">Товар</a></li>
+          <li class="site-nav__item"><a href="order.html" class="site-nav__link site-nav__link--active" aria-current="page">Оформление заявки</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+          <li class="site-nav__item"><a href="about.html" class="site-nav__link">О нас</a></li>
         </ul>
+      </nav>
 
-        <div class="d-flex align-items-center gap-2">
-          <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
-            Быстрая заявка
-          </button>
-          <a href="order.html" class="btn btn-primary btn-sm position-relative">
-            Корзина
-            <span class="badge bg-danger rounded-pill ms-1">3</span>
-          </a>
+      <div class="site-header__actions">
+        <div class="site-header__search">
+          <svg class="site-header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" class="site-header__search-input" placeholder="Поиск техники..." aria-label="Поиск по сайту">
         </div>
+
+        <a href="#order-modal" data-modal-open class="site-header__action-btn" title="Быстрый заказ" aria-label="Быстрый заказ">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+
+        <a href="order.html" class="site-header__action-btn" title="Корзина" aria-label="Корзина">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="site-header__cart-badge">3</span>
+        </a>
       </div>
     </div>
-  </nav>
-
-  <!-- 4. ХЛЕБНЫЕ КРОШКИ (BREADCRUMB) -->
-  <div class="bg-light py-2 border-bottom">
+  </header>
+  <main id="main-content" class="main">
     <div class="container">
       <nav aria-label="Хлебные крошки">
-        <ol class="breadcrumb mb-0 small">
-          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Главная</a></li>
-          <li class="breadcrumb-item"><a href="catalog.html" class="text-decoration-none">Каталог</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Оформление заказа</li>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__separator">/</li>
+          <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></li>
+          <li class="breadcrumbs__separator">/</li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Оформление заявки</span></li>
         </ol>
       </nav>
-    </div>
-  </div>
 
-  <main class="container my-4">
-    <div class="text-center mb-4">
-      <h1 class="h2 fw-bold">Оформление заказа</h1>
-      <p class="text-muted small">Пожалуйста, заполните форму для подтверждения доставки оборудования</p>
-    </div>
-
-    <!-- 5. УВЕДОМЛЕНИЕ О БЕЗОПАСНОСТИ ДАННЫХ (ALERT) -->
-    <div class="alert alert-success d-flex align-items-center shadow-sm mb-4" role="alert">
-      <span class="fs-4 me-3">🔒</span>
-      <div>
-        <strong>Безопасная сделка:</strong> Ваши контактные данные защищены протоколом SSL и не передаются третьим лицам. Оплата производится после проверки товара.
+      <div style="margin-bottom: var(--space-2xl);">
+        <h1>Оформление заявки на заказ</h1>
+        <p style="color: var(--color-text-muted);">Заполните форму для оформления бронирования и доставки аудиотехники Aura Sound.</p>
       </div>
-    </div>
 
-    <!-- 6. СЕТКА: ФОРМА ЗАКАЗА + САЙДБАР КОРЗИНЫ -->
-    <div class="row g-4">
-      <!-- 6.1. ОСНОВНАЯ ФОРМА ЗАКАЗА (FORM) -->
-      <section class="col-12 col-lg-7">
-        <div class="card shadow-sm p-4 border-0">
-          <h4 class="fw-bold mb-3 border-bottom pb-2">1. Контактная информация и доставка</h4>
+      <div class="order-layout">
+        <section aria-label="Форма заказа">
+          <form action="#" method="post" class="order-form">
+            <h2 class="order-form__title">Данные покупателя</h2>
+            <p class="order-form__subtitle">Пожалуйста, укажите контактную информацию для связи и отправки.</p>
 
-          <form action="#" method="post">
-            <!-- Поле: Имя (required, label, name, form-control) -->
-            <div class="row g-3 mb-3">
-              <div class="col-12 col-md-6">
-                <label for="orderFirstName" class="form-label">Имя получателя *</label>
-                <input type="text" class="form-control" id="orderFirstName" name="firstName" required placeholder="Денис">
+            <div class="order-form__grid">
+              <div class="order-form__field">
+                <label for="customer-name" class="order-form__label">Имя и фамилия <span class="order-form__required">*</span></label>
+                <input type="text" id="customer-name" name="name" class="order-form__input" placeholder="Иван Иванов" required minlength="2">
               </div>
-              <div class="col-12 col-md-6">
-                <label for="orderLastName" class="form-label">Фамилия получателя *</label>
-                <input type="text" class="form-control" id="orderLastName" name="lastName" required placeholder="Сидорович">
+
+              <div class="order-form__field">
+                <label for="customer-phone" class="order-form__label">Телефон <span class="order-form__required">*</span></label>
+                <input type="tel" id="customer-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required>
               </div>
             </div>
 
-            <!-- Поле: E-mail (required, label, name, form-control) -->
-            <div class="mb-3">
-              <label for="orderEmail" class="form-label">Электронная почта (E-mail) *</label>
-              <input type="email" class="form-control" id="orderEmail" name="email" required placeholder="name@example.com">
-              <div class="form-text">На этот адрес мы отправим чек и трек-номер посылки.</div>
+            <div class="order-form__field">
+              <label for="customer-email" class="order-form__label">Электронная почта (E-mail) <span class="order-form__required">*</span></label>
+              <input type="email" id="customer-email" name="email" class="order-form__input" placeholder="ivan@example.ru" required>
             </div>
 
-            <!-- Поле: Телефон с Input-Group (required, label, name, input-group) -->
-            <div class="mb-3">
-              <label for="orderPhone" class="form-label">Контактный телефон *</label>
-              <div class="input-group">
-                <span class="input-group-text">+7</span>
-                <input type="tel" class="form-control" id="orderPhone" name="phone" required placeholder="(999) 000-00-00">
-              </div>
-            </div>
-
-            <!-- Поле: Выпадающий список товаров/тем (required, label, name, form-select) -->
-            <div class="mb-3">
-              <label for="orderProductSelect" class="form-label">Основной выбранный товар *</label>
-              <select class="form-select" id="orderProductSelect" name="selectedProduct" required>
-                <option value="" disabled>-- Выберите товар из каталога --</option>
-                <option value="headphones-pro" selected>Aura Sound Master Pro (24 990 ₽)</option>
-                <option value="headphones-silver">Aura Sound Studio Silver (27 490 ₽)</option>
-                <option value="earbuds">Aura Air TWS Active (12 490 ₽)</option>
-                <option value="speakers">Aura Studio Monitor X1 (18 990 ₽)</option>
-                <option value="dac">Aura Precision DAC D1 (15 990 ₽)</option>
-                <option value="turntable">Aura Vinyl Master 7 (34 990 ₽)</option>
+            <div class="order-form__field">
+              <label for="customer-product" class="order-form__label">Выбранный товар или услуга <span class="order-form__required">*</span></label>
+              <select id="customer-product" name="product" class="order-form__select" required>
+                <option value="aura-pro-max" selected>Aura Pro Max Space Black (34 990 ₽)</option>
+                <option value="aura-silver">Aura Studio Silver Edition (26 490 ₽)</option>
+                <option value="aura-pods">Aura Pods Pro Wireless (15 990 ₽)</option>
+                <option value="aura-deck">Aura Hi-Fi Vinyl Deck Master (48 900 ₽)</option>
+                <option value="aura-boom">Aura Boom 360 Spatial (18 490 ₽)</option>
+                <option value="aura-dac">Aura Amp DAC Reference Pro (52 000 ₽)</option>
               </select>
             </div>
 
-            <!-- Поле: Способ доставки (form-check radio) -->
-            <div class="mb-3">
-              <label class="form-label d-block">Способ получения *</label>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryCourier" value="courier" checked>
-                <label class="form-check-label" for="deliveryCourier">Курьер (Бесплатно)</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryPickup" value="pickup">
-                <label class="form-check-label" for="deliveryPickup">Самовывоз из шоурума</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="deliveryMethod" id="deliverySdek" value="sdek">
-                <label class="form-check-label" for="deliverySdek">СДЭК по РФ</label>
-              </div>
+            <div class="order-form__field">
+              <label for="customer-comment" class="order-form__label">Комментарий к заявке и адрес доставки</label>
+              <textarea id="customer-comment" name="comment" class="order-form__textarea" placeholder="Укажите город, улицу, номер дома или особые пожелания к доставке..."></textarea>
+              <span class="order-form__hint">Мы согласуем удобное время перед выездом курьера.</span>
             </div>
 
-            <!-- Поле: Адрес доставки (form-control) -->
-            <div class="mb-3">
-              <label for="orderAddress" class="form-label">Адрес доставки *</label>
-              <input type="text" class="form-control" id="orderAddress" name="address" required placeholder="г. Москва, проспект Вернадского, д. 78, кв. 10">
+            <div class="order-form__checkbox-wrapper">
+              <input type="checkbox" id="customer-agree" name="agree" class="order-form__checkbox" required checked>
+              <label for="customer-agree">Я даю согласие на обработку персональных данных в соответствии с ФЗ-152</label>
             </div>
 
-            <!-- Поле: Комментарий к заказу (label, name, form-control, textarea) -->
-            <div class="mb-3">
-              <label for="orderComment" class="form-label">Комментарий к заказу или пожелания по времени доставки</label>
-              <textarea class="form-control" id="orderComment" name="comment" rows="3" placeholder="Например: домофон работает, позвонить за 1 час до приезда курьера"></textarea>
+            <div class="order-form__actions">
+              <button type="submit" class="button button--primary button--lg" style="flex: 2;">Отправить заявку</button>
+              <button type="reset" class="button button--outline button--lg" style="flex: 1;">Очистить</button>
             </div>
-
-            <!-- Поле: Промокод с Input-Group (input-group, input-group-text, btn) -->
-            <div class="mb-4">
-              <label for="orderPromo" class="form-label">Промокод на скидку</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="orderPromo" name="promocode" placeholder="MIREA2026">
-                <button class="btn btn-outline-secondary" type="button">Применить</button>
-              </div>
-            </div>
-
-            <!-- Поле: Чекбокс согласия (required, label, name, form-check) -->
-            <div class="form-check mb-4">
-              <input class="form-check-input" type="checkbox" id="orderAgreement" name="agreement" required checked>
-              <label class="form-check-label small" for="orderAgreement">
-                Я подтверждаю корректность данных и согласен с условиями оферты и обработки персональных данных *
-              </label>
-            </div>
-
-            <!-- Кнопка отправки формы (btn btn-primary) -->
-            <button type="submit" class="btn btn-primary btn-lg w-100">
-              Подтвердить и отправить заказ
-            </button>
           </form>
-        </div>
-      </section>
+        </section>
 
-      <!-- 6.2. САЙДБАР: СОСТАВ ЗАКАЗА И РАСЧЕТ СУММЫ -->
-      <aside class="col-12 col-lg-5">
-        <div class="card shadow-sm p-4 border-0 mb-4">
-          <h4 class="fw-bold mb-3 border-bottom pb-2 d-flex justify-content-between align-items-center">
-            Товары в заказе
-            <span class="badge bg-primary rounded-pill">3</span>
-          </h4>
-
-          <ul class="list-group list-group-flush mb-3">
-            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-              <div class="d-flex align-items-center gap-2">
-                <img src="images/product-headphones-black.svg" alt="Aura Master Pro" style="width: 48px; height: 48px; object-fit: contain;">
-                <div>
-                  <h6 class="my-0 fw-bold small">Aura Sound Master Pro</h6>
-                  <small class="text-muted">Цвет: Черный | 1 шт.</small>
-                </div>
-              </div>
-              <span class="fw-bold text-nowrap">24 990 ₽</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-              <div class="d-flex align-items-center gap-2">
-                <img src="images/product-dac.svg" alt="Aura DAC D1" style="width: 48px; height: 48px; object-fit: contain;">
-                <div>
-                  <h6 class="my-0 fw-bold small">Aura Precision DAC D1</h6>
-                  <small class="text-muted">Аудиофильский ЦАП | 1 шт.</small>
-                </div>
-              </div>
-              <span class="fw-bold text-nowrap">15 990 ₽</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-              <div class="d-flex align-items-center gap-2">
-                <img src="images/product-cables.svg" alt="Aura OCC Cable" style="width: 48px; height: 48px; object-fit: contain;">
-                <div>
-                  <h6 class="my-0 fw-bold small">Aura Silver OCC 4.4mm</h6>
-                  <small class="text-muted">Балансный кабель | 1 шт.</small>
-                </div>
-              </div>
-              <span class="fw-bold text-nowrap">4 990 ₽</span>
-            </li>
-          </ul>
-
-          <div class="border-top pt-3">
-            <div class="d-flex justify-content-between small text-muted mb-1">
-              <span>Сумма товаров:</span>
-              <span>45 970 ₽</span>
+        <aside class="order-summary" aria-label="Состав заказа">
+          <h2 style="font-size: 1.25rem; margin-bottom: var(--space-md); padding-bottom: 8px; border-bottom: 1px solid var(--color-border);">Ваш заказ</h2>
+          <div style="display: flex; gap: 16px; margin-bottom: var(--space-lg); align-items: center;">
+            <div style="width: 70px; height: 70px; background: var(--color-surface-muted); border-radius: var(--radius-md); padding: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <img src="images/product-headphones-black.svg" alt="Aura Pro Max" style="max-height: 55px;">
             </div>
-            <div class="d-flex justify-content-between small text-success mb-1">
-              <span>Скидка по акции:</span>
-              <span>- 5 000 ₽</span>
-            </div>
-            <div class="d-flex justify-content-between small text-muted mb-3">
-              <span>Доставка:</span>
-              <span class="text-success fw-semibold">Бесплатно</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-baseline border-top pt-2">
-              <span class="h5 fw-bold mb-0">Итого к оплате:</span>
-              <span class="h4 fw-bold text-primary mb-0">40 970 ₽</span>
+            <div>
+              <div style="font-weight: 600; font-size: 0.925rem; color: var(--color-text);">Aura Pro Max Space Black</div>
+              <div style="font-size: 0.75rem; color: var(--color-text-muted);">Цвет: Space Black | 1 шт.</div>
+              <div style="font-weight: 700; color: var(--color-primary); margin-top: 4px;">34 990 ₽</div>
             </div>
           </div>
-        </div>
 
-        <!-- Карточка помощи покупателю -->
-        <div class="card bg-light border-0 p-3">
-          <h6 class="fw-bold mb-2">Нужна консультация по заказу?</h6>
-          <p class="small text-muted mb-2">
-            Свяжитесь с отделом обслуживания клиентов прямо сейчас или закажите обратный звонок.
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="fw-bold text-primary small">+7 (495) 788-99-00</span>
-            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
-              Заказать звонок
-            </button>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem; border-top: 1px solid var(--color-border); padding-top: var(--space-md); margin-bottom: var(--space-lg);">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--color-text-muted);">Стоимость товара:</span>
+              <span>34 990 ₽</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--color-text-muted);">Скидка по акции:</span>
+              <span style="color: var(--color-danger);">- 5 000 ₽</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--color-text-muted);">Доставка курьером:</span>
+              <span style="color: var(--color-success); font-weight: 600;">Бесплатно</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 800; border-top: 1px solid var(--color-border); padding-top: 10px; margin-top: 4px;">
+              <span>К оплате:</span>
+              <span style="color: var(--color-primary);">34 990 ₽</span>
+            </div>
           </div>
-        </div>
-      </aside>
+
+          <div style="background: var(--color-surface-muted); border-radius: var(--radius-md); padding: 12px; font-size: 0.75rem; color: var(--color-text-muted); line-height: 1.5;">
+            🔒 Безопасное бронирование без предварительной оплаты. Оплата производится картой или наличными после осмотра товара.
+          </div>
+        </aside>
+      </div>
     </div>
   </main>
-
-  <!-- 7. ПОДВАЛ (FOOTER) -->
-  <footer class="text-white pt-5 pb-4 mt-auto">
+  <footer class="site-footer" id="contacts">
     <div class="container">
-      <div class="row g-4 mb-4">
-        <div class="col-12 col-md-4">
-          <h5 class="fw-bold text-uppercase mb-3">Aura Sound</h5>
-          <p class="text-secondary small">Интернет-магазин премиальной аудиотехники. Официальный дилер ведущих мировых аудио-брендов в России.</p>
-          <div class="text-secondary small">Москва, проспект Вернадского, 78 (РТУ МИРЭА)</div>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-header__logo site-footer__logo">
+            <svg class="site-header__logo-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2zm-4 3h2v4H7zm8 0h2v4h-2z"/>
+            </svg>
+            <span>AURA SOUND</span>
+          </a>
+          <p class="site-footer__text">
+            Инновационная аудиотехника для тех, кто ценит чистоту звука, передовые технологии и бескомпромиссный комфорт.
+          </p>
+          <div class="site-footer__socials">
+            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="site-footer__social-link" title="Telegram" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+            </a>
+            <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="site-footer__social-link" title="VKontakte" aria-label="VKontakte">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91h-1.62c-.61 0-.8-.49-1.9-1.59-1-.96-1.44-1.08-1.69-1.08-.34 0-.44.1-.44.59v1.43c0 .39-.12.65-1.15.65-1.7 0-3.59-1.03-4.92-2.95-2-2.85-2.55-5-2.55-5.44 0-.25.1-.48.59-.48h1.62c.44 0 .61.2.78.68.85 2.49 2.28 4.67 2.87 4.67.22 0 .32-.1.32-.66v-2.56c-.07-1.18-.69-1.28-.69-1.7 0-.2.17-.4.44-.4h2.55c.37 0 .5.2.5.64v3.47c0 .37.17.5.27.5.22 0 .4-.13.82-.55 1.27-1.42 2.18-3.63 2.18-3.63.12-.25.32-.47.76-.47h1.62c.49 0 .6.25.49.64-.2 0.93-2.15 3.69-2.25 3.86-.2.32-.28.46 0 .83.2.27.87.85 1.32 1.37.82.93 1.45 1.72 1.62 2.27.17.54-.1.82-.59.82z"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <h6 class="fw-bold mb-3">Разделы</h6>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none">Главная</a></li>
-            <li class="mb-2"><a href="catalog.html" class="text-secondary text-decoration-none">Каталог</a></li>
-            <li class="mb-2"><a href="product.html" class="text-secondary text-decoration-none">Товар</a></li>
-            <li class="mb-2"><a href="order.html" class="text-secondary text-decoration-none">Заказ</a></li>
+
+        <div>
+          <h4 class="site-footer__col-title">Каталог</h4>
+          <ul class="site-footer__links">
+            <li><a href="catalog.html" class="site-footer__link">Беспроводные наушники</a></li>
+            <li><a href="catalog.html" class="site-footer__link">TWS-вкладыши</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Виниловые проигрыватели</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Портативная акустика</a></li>
+            <li><a href="catalog.html" class="site-footer__link">Усилители и ЦАП</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md-2">
-          <h6 class="fw-bold mb-3">Информация</h6>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">О нас</a></li>
-            <li class="mb-2"><a href="contacts.html" class="text-secondary text-decoration-none">Контакты</a></li>
-            <li class="mb-2"><a href="index.html#faqAccordion" class="text-secondary text-decoration-none">FAQ</a></li>
+
+        <div>
+          <h4 class="site-footer__col-title">Навигация</h4>
+          <ul class="site-footer__links">
+            <li><a href="index.html" class="site-footer__link">Главная страница</a></li>
+            <li><a href="product.html" class="site-footer__link">Страница товара</a></li>
+            <li><a href="order.html" class="site-footer__link">Оформление заявки</a></li>
+            <li><a href="contacts.html" class="site-footer__link">Контакты</a></li>
+            <li><a href="about.html" class="site-footer__link">О компании</a></li>
+            <li><a href="index.html#advantages" class="site-footer__link">Преимущества</a></li>
+            <li><a href="index.html#popular" class="site-footer__link">Популярные товары</a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-4">
-          <h6 class="fw-bold mb-3">Контакты</h6>
-          <p class="text-secondary small mb-1">Горячая линия: +7 (495) 788-99-00</p>
-          <p class="text-secondary small mb-1">Email: info@aurasound.ru</p>
-          <p class="text-secondary small">Ежедневно с 10:00 до 21:00</p>
+
+        <div>
+          <h4 class="site-footer__col-title">Контакты</h4>
+          <address class="site-footer__text">
+            <p style="margin-bottom: 8px;"><strong>Адрес:</strong> г. Москва, пр-т Вернадского, 78</p>
+            <p style="margin-bottom: 8px;"><strong>Телефон:</strong> <a href="tel:+74950000000" class="site-footer__link" style="color: #60a5fa;">+7 (495) 000-00-00</a></p>
+            <p style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:info@aurasound.ru" class="site-footer__link">info@aurasound.ru</a></p>
+            <p style="margin-bottom: 0;"><strong>Часы:</strong> Ежедневно 10:00 – 22:00</p>
+          </address>
         </div>
       </div>
-      <hr class="border-secondary">
-      <div class="d-flex flex-wrap justify-content-between align-items-center small text-secondary">
-        <div>© 2026 Aura Sound. Контрольная работа №2 по курсу «Фронтенд и бэкенд разработка».</div>
-        <div>Студент: Сидорович Д.С., группа ЭФБО-17-25</div>
+
+      <div class="site-footer__bottom">
+        <div>
+          &copy; 2026 Aura Sound. РТУ МИРЭА, ИПТИП, Кафедра Индустриального программирования.
+        </div>
+        <div class="site-footer__author">
+          Преподаватель: Загородних Н. А.
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- 8. МОДАЛЬНОЕ ОКНО БЫСТРОГО ЗАКАЗА (MODAL) -->
-  <div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title fw-bold" id="quickOrderModalLabel">Быстрая заявка на консультацию</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+  <aside id="order-modal" class="modal" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <a href="#main-content" data-modal-close class="modal__overlay" aria-label="Закрыть окно"></a>
+    <div class="modal__dialog">
+      <a href="#main-content" data-modal-close class="modal__close" aria-label="Закрыть">&times;</a>
+      <header class="modal__header">
+        <h3 id="modal-title" class="modal__title">Быстрый заказ в 1 клик</h3>
+        <p class="modal__subtitle">Оставьте ваши контакты, и мы перезвоним в течение 10 минут.</p>
+      </header>
+      <form action="order.html" method="get" class="order-form" style="padding: 0; border: none; box-shadow: none;">
+        <div class="order-form__field">
+          <label for="modal-name" class="order-form__label">Ваше имя <span class="order-form__required">*</span></label>
+          <input type="text" id="modal-name" name="name" class="order-form__input" placeholder="Иван Иванов" required minlength="2">
         </div>
-        <form action="order.html" method="get">
-          <div class="modal-body">
-            <p class="text-muted small">Оставьте свои контактные данные, и специалист Aura Sound свяжется с вами в течение 10 минут.</p>
-            <div class="mb-3">
-              <label for="modalName" class="form-label">Ваше имя *</label>
-              <input type="text" class="form-control" id="modalName" name="name" required placeholder="Иван Иванов">
-            </div>
-            <div class="mb-3">
-              <label for="modalPhone" class="form-label">Номер телефона *</label>
-              <div class="input-group">
-                <span class="input-group-text">+7</span>
-                <input type="tel" class="form-control" id="modalPhone" name="phone" required placeholder="(999) 000-00-00">
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="modalCategory" class="form-label">Интересующая категория</label>
-              <select class="form-select" id="modalCategory" name="category">
-                <option value="headphones" selected>Беспроводные наушники</option>
-                <option value="speakers">Студийная акустика</option>
-                <option value="dac">ЦАП и усилители</option>
-                <option value="other">Другое / Консультация</option>
-              </select>
-            </div>
-            <div class="form-check mb-2">
-              <input class="form-check-input" type="checkbox" id="modalAgree" name="agree" required checked>
-              <label class="form-check-label small" for="modalAgree">
-                Согласен на обработку персональных данных *
-              </label>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-            <button type="submit" class="btn btn-primary">Отправить заявку</button>
-          </div>
-        </form>
-      </div>
+        <div class="order-form__field">
+          <label for="modal-phone" class="order-form__label">Номер телефона <span class="order-form__required">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="order-form__input" placeholder="+7 (999) 000-00-00" required>
+        </div>
+        <div class="order-form__field">
+          <label for="modal-product" class="order-form__label">Выбранный товар</label>
+          <select id="modal-product" name="product" class="order-form__select">
+            <option value="aura-pro-max">Aura Pro Max Space Black (34 990 ₽)</option>
+            <option value="aura-silver">Aura Studio Silver Edition (26 490 ₽)</option>
+            <option value="aura-pods">Aura Pods Pro Wireless (15 990 ₽)</option>
+            <option value="aura-deck">Aura Hi-Fi Vinyl Deck Master (48 900 ₽)</option>
+          </select>
+        </div>
+        <div class="order-form__checkbox-wrapper">
+          <input type="checkbox" id="modal-agree" name="agree" class="order-form__checkbox" required checked>
+          <label for="modal-agree">Я согласен на обработку персональных данных</label>
+        </div>
+        <button type="submit" class="button button--primary button--block button--lg">Подтвердить заявку</button>
+      </form>
     </div>
-  </div>
-
-  <!-- 9. ПОДКЛЮЧЕНИЕ BOOTSTRAP JS BUNDLE ЛОКАЛЬНО -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </aside>
+  <a href="#top" class="button-top" title="Наверх" aria-label="Вернуться в начало страницы">
+    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </a>
+  <script src="js/main.js"></script>
 </body>
 </html>
